@@ -47,13 +47,42 @@ body {
 
 .card {
     /* background:#5245b6; */
-    background-image: linear-gradient(180deg, #5245b6, #847bca);
+    /* background-image: linear-gradient(180deg, #5245b6, #847bca); */
     color: #F9F7F7;
     padding: 50px;
     width: 500px;
     height: 500px;
     border-radius: 30px;
     margin: 10px;
+    animation-name: random-color;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes random-color {
+    0% {
+        background-color: rgb(255, 0, 0);
+    }
+
+    20% {
+        background-color: rgb(212, 141, 8);
+    }
+
+    40% {
+        background-color: rgba(224, 195, 31, 0.897);
+    }
+
+    60% {
+        background-color: rgb(25, 173, 37);
+    }
+
+    80% {
+        background-color: rgb(102, 154, 250);
+    }
+
+    100% {
+        background-color: #847bca;
+    }
 }
 
 .info {
