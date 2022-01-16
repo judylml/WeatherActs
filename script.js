@@ -25,6 +25,13 @@ let weather = {
         document.querySelector(".min-temp").innerText = "Low: " + temp_min + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed + "km/h";
-
+    },
+    searchWeather: function () {
+        this.getWeather(document.querySelector(".search-bar").value);
     }
+
 };
+
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.searchWeather();
+});
