@@ -16,7 +16,6 @@ let weather = {
         const { icon, description } = data.weather[0];
         const { temp, feels_like, temp_min, temp_max, humidity } = data.main;
         const { speed } = data.wind;
-        //console.log(name, icon, description, temp, feels_like, temp_min, temp_max, humidity, speed);
 
         document.querySelector(".city").innerText = "Weather in " + name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -27,7 +26,7 @@ let weather = {
         document.querySelector(".min-temp").innerText = "Low: " + temp_min + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed + "km/h";
-        
+
         document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"
     },

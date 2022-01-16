@@ -26,6 +26,11 @@ body {
     text-transform: capitalize;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 .fa-cloud {
     color: white;
     font-size: 100px;
@@ -35,6 +40,8 @@ body {
 .temp {
     font-size: 60px;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    margin-bottom: 0.5em;
 }
 
 .temp-description {
@@ -115,5 +122,5 @@ button:hover {
     color: white;
     position: absolute;
     top: 0;
-    left: 20px
+    left: 20px;
 }
