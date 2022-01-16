@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 650px;
-    margin: 0;
+    margin: 100px;
     background: #F9F7F7;
     padding: 10px;
 }
@@ -22,6 +22,8 @@ body {
 .description {
     font-family:'Lato', sans-serif;
     font-size: 20px;
+    padding-bottom: 20px;
+    text-transform: capitalize;
 }
 
 .fa-cloud {
@@ -48,7 +50,7 @@ body {
     color: #F9F7F7;
     padding: 50px;
     width: 500px;
-    height: 490px;
+    height: 575px;
     border-radius: 30px;
     margin: 10px;
 }
