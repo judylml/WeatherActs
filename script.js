@@ -47,4 +47,4 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
     }
 });
 
-weather.getWeather("Denver");
+weather.getWeather("Vancouver");

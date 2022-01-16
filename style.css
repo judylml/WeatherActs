@@ -31,17 +31,11 @@ body {
     align-items: center;
 }
 
-.fa-cloud {
-    color: white;
-    font-size: 100px;
-    padding-top: 20px;
-}
-
 .temp {
     font-size: 60px;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.1em;
 }
 
 .temp-description {
@@ -57,7 +51,7 @@ body {
     color: #F9F7F7;
     padding: 50px;
     width: 500px;
-    height: 575px;
+    height: 500px;
     border-radius: 30px;
     margin: 10px;
 }
