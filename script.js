@@ -1,5 +1,6 @@
 let weather = {
     "apiKey" : "4ba1420c357df7768d63f241720ee87b",
+
     getWeather: function (city) {
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q=" 
@@ -9,12 +10,13 @@ let weather = {
         ).then((response) => response.json())
         .then((data) => this.displayWeather(data));
     },
+
     displayWeather: function (data) {
         const { name } = data;
         const { icon, description } = data.weather[0];
         const { temp, feels_like, temp_min, temp_max, humidity } = data.main;
         const { speed } = data.wind;
-        console.log(name, icon, description, temp, feels_like, temp_min, temp_max, humidity, speed);
+        //console.log(name, icon, description, temp, feels_like, temp_min, temp_max, humidity, speed);
 
         document.querySelector(".city").innerText = "Weather in " + name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -26,6 +28,7 @@ let weather = {
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed + "km/h";
     },
+
     searchWeather: function () {
         this.getWeather(document.querySelector(".search-bar").value);
     }
@@ -34,4 +37,10 @@ let weather = {
 
 document.querySelector(".search button").addEventListener("click", function () {
     weather.searchWeather();
+});
+
+document.querySelector(".search-bar").addEventListener("keyup", function (event) {
+    if (event.key == "Enter") {
+        weather.searchWeather();
+    }
 });
