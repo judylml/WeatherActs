@@ -27,6 +27,7 @@ let weather = {
         document.querySelector(".min-temp").innerText = "Low: " + temp_min + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed + "km/h";
+        document.querySelector(".weather").classList.remove("loading");
     },
 
     searchWeather: function () {
@@ -44,3 +45,5 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
         weather.searchWeather();
     }
 });
+
+weather.getWeather("Denver");
